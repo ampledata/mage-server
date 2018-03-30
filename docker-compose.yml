@@ -16,6 +16,8 @@ services:
     - "4242:4242"
     depends_on:
     - "migrator"
+    env_file:
+    - mage.env
   migrator:
     image: mage:0.0.1-beta
     links:
